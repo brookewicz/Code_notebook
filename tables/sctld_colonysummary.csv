@@ -1,0 +1,6 @@
+"health_status","CNAT","DLAB","MCAV","MMEA","OANN","OFAV","PAST","PSTR","SSID","Total"
+"Resistant",1,7,13,0,4,9,16,8,5,63
+"SCTLD",0,0,0,0,3,3,0,1,18,25
+"SCTLD_Recovery",0,1,1,0,0,0,4,0,2,8
+"SCTLD_Mortality",0,0,17,13,0,0,0,22,3,55
+"Total",1,8,31,13,7,12,20,31,28,151
