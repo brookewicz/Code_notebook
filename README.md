@@ -19,10 +19,16 @@
 ## Outputs
 - **cbc_maps/:** .tif files contain tagged colony map for each CBC transect
 - **tables/:** tagged colony summary tables (from SampleSummaries.ipynb)
+
     - *sctld_colonysummary.csv* - colonies (tagged in 2019 & 2022) sorted by species and health status (Resistant (did not get sctld), SCTLD (SCTLD signs), SCTLD_Recovery (SCTLD signs then recovered), SCTLD_Mortality (died from SCTLD))
+
     - *bks_sctld_colonysummary.csv* - colonies sequenced in 3/25 sorted by species and health status
+
     - *tagged_summarytable.csv* - total tagged colonies sorted by species & transect
+
     - *immune_summarytable.csv* - immune tagged colonies (RAPID subset) sorted by species & transect
+
     - *clb_taggedsummary.csv* - tagged colonies for 2023 bleaching tracking (excludes colonies that died by 9/2023) sorted by species, transect, and bleaching status
+
     - *clb_immunesummary.csv* - immune tagged colonies for 2023 bleaching tracking sorted by species, transect, and bleaching status
 
