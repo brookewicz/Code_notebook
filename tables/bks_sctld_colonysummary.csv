@@ -1,6 +1,6 @@
 "health_status","MCAV","MMEA","OANN","OFAV","PAST","PSTR","Total"
-"Resistant",13,0,4,8,16,8,49
+"Resistant",13,0,5,8,16,8,50
 "SCTLD",0,0,2,3,0,1,6
 "SCTLD_Recovery",1,0,0,0,4,0,5
-"SCTLD_Mortality",16,10,0,0,0,22,48
-"Total",30,10,6,11,20,31,108
+"SCTLD_Mortality",17,13,0,0,0,22,52
+"Total",31,13,7,11,20,31,113
