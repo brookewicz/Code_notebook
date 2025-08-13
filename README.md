@@ -2,7 +2,7 @@
 - Code notebook for GW lab, started Jan 2025
 - for misc codes - organization, qa/qc, codes for specific chapters or applicable to all chapters 
 
-## data_summaries
+## Data_Summaries
 ### Scripts
 - **ColonySummaryTables.ipynb:** 8/10/2025 summary tables of tagged colonies - bleaching, all sctld, & colonies that I sequenced 3/25 
     - list of 3/25 sequenced samples is in *inputs/genohublist_sctld2024.txt*; see CBC_metagenomics/all_sctld for analysis
@@ -27,7 +27,7 @@
 
     - *clb_immune_colonysummary.csv* - immune tagged colonies for 2023 bleaching tracking sorted by species, transect, and bleaching status
 
-## qa_qc
+## QA_QC
 ### Scripts
 - **organize_photos.sh:** 8/7/2025 bash script to reorganize google drive colony photos by species 
 
@@ -44,11 +44,11 @@
 - **sample_fixes.ipynb:** 9/2024 started fixing misc issues (format issues, inconsistencies, started adding bleaching data into sample type) in SCTLD_samples spreadsheet but never exported or finished (last checked on.. 8/11/2025)
 
 
-## cbc_maps
-- **cbc_maps/:** .tif files contain tagged colony map for each CBC transect
-- **cbc_maps/CBC Transect Maps_color_SD.R:** 6/1/2025 R script that generates colony maps for CBC. (made by Sofia Diaz de Villegas, Fuess lab)
+## CBC_Maps
+- **CBC_Maps/:** .tif files contain tagged colony map for each CBC transect
+- **CBC_Maps/CBC Transect Maps_color_SD.R:** 6/1/2025 R script that generates colony maps for CBC. (made by Sofia Diaz de Villegas, Fuess lab)
 
-## inputs
+## Inputs
 - any additional input files for scripts (most inputs come from https://github.com/sagw/SCTLD_samples)
 
 - *genohublist_sctld2024.txt* - list of sample IDs sequenced in 3/2025 for sctld metagenomics analysis. used in ColonySummaryTables.ipynb: *bks_sctld_colonysummary.csv*
