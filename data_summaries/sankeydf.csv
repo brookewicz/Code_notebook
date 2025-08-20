@@ -1,0 +1,341 @@
+x,node,next_x,next_node,colony_id,sample_condition,species
+Jun 2019,Healthy,May 2022,Healthy,T1_2_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T1_2_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T1_2_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Diseased,T1_4_PSTR,Healthy,PSTR
+May 2022,Diseased,Dec 2022,Dead,T1_4_PSTR,Diseased_Tissue,PSTR
+Dec 2022,Dead,NA,NA,T1_4_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T1_6_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Diseased,T1_6_PSTR,Healthy,PSTR
+Dec 2022,Diseased,NA,NA,T1_6_PSTR,Diseased_Tissue,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T1_7_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T1_7_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T1_7_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T1_8_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Diseased,T1_8_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Diseased,NA,NA,T1_8_MCAV,Diseased_Tissue,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T1_12_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Healthy,T1_12_PSTR,Healthy,PSTR
+Dec 2022,Healthy,NA,NA,T1_12_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T1_13_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T1_13_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T1_13_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Diseased,T1_14_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Dead,T1_14_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Dead,NA,NA,T1_14_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T1_15_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Dead,T1_15_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Dead,NA,NA,T1_15_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T1_19_PAST,Healthy,PAST
+May 2022,Diseased,Dec 2022,Healthy,T1_19_PAST,Diseased_Tissue,PAST
+Dec 2022,Healthy,NA,NA,T1_19_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T1_20_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Diseased,T1_20_PAST,Healthy,PAST
+Dec 2022,Diseased,NA,NA,T1_20_PAST,Diseased_Tissue,PAST
+Jun 2019,Healthy,May 2022,Healthy,T1_21_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T1_21_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T1_21_PAST,Healthy,PAST
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T1_22_OANN,NA,OANN
+May 2022,Healthy,Dec 2022,Diseased,T1_22_OANN,Healthy,OANN
+Dec 2022,Diseased,NA,NA,T1_22_OANN,Diseased_Tissue,OANN
+Jun 2019,Not_yet_tagged,May 2022,DC,T1_23_OANN,NA,OANN
+May 2022,DC,Dec 2022,Healthy,T1_23_OANN,Healthy,OANN
+Dec 2022,Healthy,NA,NA,T1_23_OANN,Healthy,OANN
+Jun 2019,Healthy,May 2022,Healthy,T1_24_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T1_24_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T1_24_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T1_24_MCAV,Healthy,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T1_25_OANN,NA,OANN
+May 2022,Healthy,Dec 2022,Healthy,T1_25_OANN,Healthy,OANN
+Dec 2022,Healthy,NA,NA,T1_25_OANN,Healthy,OANN
+Jun 2019,Healthy,May 2022,Dead,T1_329_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T1_329_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T1_329_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Dead,T1_333_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T1_333_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T1_333_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Dead,T1_335_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T1_335_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T1_335_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T1_342_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T1_342_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T1_342_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Dead,T1_355_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T1_355_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T1_355_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Dead,T1_382_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T1_382_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T1_382_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T1_404_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T1_404_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T1_404_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T1_417_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T1_417_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T1_417_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T1_419_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T1_419_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T1_419_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T1_422_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T1_422_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T1_422_PSTR,NA,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T2_28_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T2_28_PSTR,NA,PSTR
+Dec 2022,Diseased,NA,NA,T2_28_PSTR,Diseased_Tissue,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T2_29_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T2_29_OFAV,NA,OFAV
+Dec 2022,Healthy,NA,NA,T2_29_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T2_30_OANN,NA,OANN
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T2_30_OANN,NA,OANN
+Dec 2022,Diseased,NA,NA,T2_30_OANN,Diseased_Tissue,OANN
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T2_32_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T2_32_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T2_32_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Not_Visited,T2_47_PAST,Healthy,PAST
+May 2022,Not_Visited,Dec 2022,Not_Visited,T2_47_PAST,NA,PAST
+Dec 2022,Not_Visited,NA,NA,T2_47_PAST,NA,PAST
+Jun 2019,Healthy,May 2022,Healthy,T2_53_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T2_53_MCAV,NA,MCAV
+Dec 2022,Healthy,NA,NA,T2_53_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T2_54_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Healthy,T2_54_PSTR,Healthy,PSTR
+Dec 2022,Healthy,NA,NA,T2_54_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T2_55_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T2_55_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T2_55_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T2_56_PAST,Healthy,PAST
+May 2022,Diseased,Dec 2022,Healthy,T2_56_PAST,Diseased_Tissue,PAST
+Dec 2022,Healthy,NA,NA,T2_56_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Dead,T2_56_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T2_56_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T2_56_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T2_57_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T2_57_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T2_57_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T2_58_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Dead,T2_58_PSTR,Healthy,PSTR
+Dec 2022,Dead,NA,NA,T2_58_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Diseased,T2_59_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Healthy,T2_59_MCAV,NA,MCAV
+Dec 2022,Healthy,NA,NA,T2_59_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T2_60_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T2_60_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T2_60_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T2_61_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Dead,T2_61_MCAV,Healthy,MCAV
+Dec 2022,Dead,NA,NA,T2_61_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T2_62_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Dead,T2_62_PSTR,Healthy,PSTR
+Dec 2022,Dead,NA,NA,T2_62_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T2_63_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T2_63_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T2_63_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T2_65_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Healthy,T2_65_PSTR,Healthy,PSTR
+Dec 2022,Healthy,NA,NA,T2_65_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T2_68_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T2_68_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T2_68_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T2_69_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T2_69_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T2_69_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T2_70_PSTR,Healthy,PSTR
+May 2022,Diseased,Dec 2022,Dead,T2_70_PSTR,Diseased_Tissue,PSTR
+Dec 2022,Dead,NA,NA,T2_70_PSTR,NA,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T2_76_OFAV,NA,OFAV
+May 2022,Healthy,Dec 2022,Healthy,T2_76_OFAV,Healthy,OFAV
+Dec 2022,Healthy,NA,NA,T2_76_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T2_77_OANN,NA,OANN
+May 2022,Healthy,Dec 2022,Healthy,T2_77_OANN,Healthy,OANN
+Dec 2022,Healthy,NA,NA,T2_77_OANN,Healthy,OANN
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T2_79_OFAV,NA,OFAV
+May 2022,Healthy,Dec 2022,Healthy,T2_79_OFAV,Healthy,OFAV
+Dec 2022,Healthy,NA,NA,T2_79_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T2_80_OFAV,NA,OFAV
+May 2022,Healthy,Dec 2022,Diseased,T2_80_OFAV,Healthy,OFAV
+Dec 2022,Diseased,NA,NA,T2_80_OFAV,Diseased_Tissue,OFAV
+Jun 2019,Healthy,May 2022,Dead,T2_311_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_311_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_311_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T2_320_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_320_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_320_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T2_325_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_325_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_325_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T2_328_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_328_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_328_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T2_330_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_330_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_330_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T2_344_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T2_344_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T2_344_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Not_Visited,T2_347_PAST,Healthy,PAST
+May 2022,Not_Visited,Dec 2022,Not_Visited,T2_347_PAST,NA,PAST
+Dec 2022,Not_Visited,NA,NA,T2_347_PAST,NA,PAST
+Jun 2019,Healthy,May 2022,Dead,T2_403_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T2_403_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T2_403_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T2_427_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T2_427_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T2_427_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T3_373_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T3_373_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T3_373_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Healthy,T3_2_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T3_2_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T3_2_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T3_4_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Healthy,T3_4_PSTR,Healthy,PSTR
+Dec 2022,Healthy,NA,NA,T3_4_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T3_6_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_6_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T3_6_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T3_7_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_7_PAST,NA,PAST
+Dec 2022,Healthy,NA,NA,T3_7_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Healthy,T3_8_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_8_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T3_8_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Dead,T3_9_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T3_9_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T3_9_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T3_10_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_10_PAST,Healthy,PAST
+Dec 2022,Healthy,NA,NA,T3_10_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Dead,T3_11_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T3_11_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T3_11_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T3_12_MCAV,Healthy,MCAV
+May 2022,Dead,Dec 2022,Dead,T3_12_MCAV,NA,MCAV
+Dec 2022,Dead,NA,NA,T3_12_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T3_13_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_13_PAST,NA,PAST
+Dec 2022,Healthy,NA,NA,T3_13_PAST,NA,PAST
+Jun 2019,Healthy,May 2022,Healthy,T3_14_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T3_14_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T3_14_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T3_15_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Diseased,T3_15_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Diseased,NA,NA,T3_15_MCAV,Diseased_Tissue,MCAV
+Jun 2019,Healthy,May 2022,Dead,T3_16_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T3_16_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T3_16_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Diseased,T3_17_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Dead,T3_17_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Dead,NA,NA,T3_17_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T3_18_PAST,Healthy,PAST
+May 2022,Diseased,Dec 2022,Diseased,T3_18_PAST,Diseased_Tissue,PAST
+Dec 2022,Diseased,NA,NA,T3_18_PAST,Diseased_Tissue,PAST
+Jun 2019,Healthy,May 2022,Healthy,T3_20_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Healthy,T3_20_PSTR,Healthy,PSTR
+Dec 2022,Healthy,NA,NA,T3_20_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T3_21_MCAV,Healthy,MCAV
+May 2022,Healthy,Dec 2022,Healthy,T3_21_MCAV,Healthy,MCAV
+Dec 2022,Healthy,NA,NA,T3_21_MCAV,Healthy,MCAV
+Jun 2019,Healthy,May 2022,Diseased,T3_22_MCAV,Healthy,MCAV
+May 2022,Diseased,Dec 2022,Dead,T3_22_MCAV,Diseased_Tissue,MCAV
+Dec 2022,Dead,NA,NA,T3_22_MCAV,NA,MCAV
+Jun 2019,Healthy,May 2022,Healthy,T3_24_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_24_PAST,NA,PAST
+Dec 2022,Healthy,NA,NA,T3_24_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Dead,T3_321_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T3_321_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T3_321_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T3_345_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T3_345_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T3_345_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Dead,T3_30_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T3_30_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T3_30_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T3_31_PSTR,Healthy,PSTR
+May 2022,Healthy,Dec 2022,Dead,T3_31_PSTR,Healthy,PSTR
+Dec 2022,Dead,NA,NA,T3_31_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Dead,T3_32_PSTR,Healthy,PSTR
+May 2022,Dead,Dec 2022,Dead,T3_32_PSTR,NA,PSTR
+Dec 2022,Dead,NA,NA,T3_32_PSTR,NA,PSTR
+Jun 2019,Healthy,May 2022,Healthy,T3_34_PAST,Healthy,PAST
+May 2022,Healthy,Dec 2022,Healthy,T3_34_PAST,NA,PAST
+Dec 2022,Healthy,NA,NA,T3_34_PAST,Healthy,PAST
+Jun 2019,Healthy,May 2022,Dead,T3_29_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T3_29_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T3_29_MMEA,NA,MMEA
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T3_38_OFAV,NA,OFAV
+May 2022,Healthy,Dec 2022,Healthy,T3_38_OFAV,Healthy,OFAV
+Dec 2022,Healthy,NA,NA,T3_38_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Healthy,T3_39_OFAV,NA,OFAV
+May 2022,Healthy,Dec 2022,Healthy,T3_39_OFAV,Healthy,OFAV
+Dec 2022,Healthy,NA,NA,T3_39_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_66_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_66_OFAV,NA,OFAV
+Dec 2022,Healthy,NA,NA,T3_66_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_67_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T3_67_MCAV,NA,MCAV
+Dec 2022,Diseased,NA,NA,T3_67_MCAV,Diseased_Tissue,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_68_OANN,NA,OANN
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_68_OANN,NA,OANN
+Dec 2022,Healthy,NA,NA,T3_68_OANN,Healthy,OANN
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_70_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_70_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T3_70_PSTR,Healthy,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_71_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,DC,T3_71_MCAV,NA,MCAV
+Dec 2022,DC,NA,NA,T3_71_MCAV,Healthy,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_72_OANN,NA,OANN
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_72_OANN,NA,OANN
+Dec 2022,Healthy,NA,NA,T3_72_OANN,Healthy,OANN
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_74_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_74_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T3_74_PSTR,Healthy,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T3_75_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T3_75_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T3_75_PSTR,Healthy,PSTR
+Jun 2019,Healthy,May 2022,Dead,T3_378_MMEA,Healthy,MMEA
+May 2022,Dead,Dec 2022,Dead,T3_378_MMEA,NA,MMEA
+Dec 2022,Dead,NA,NA,T3_378_MMEA,NA,MMEA
+Jun 2019,Healthy,May 2022,Not_Visited,T3_12flag_PAST,Healthy,PAST
+May 2022,Not_Visited,Dec 2022,Not_Visited,T3_12flag_PAST,NA,PAST
+Dec 2022,Not_Visited,NA,NA,T3_12flag_PAST,NA,PAST
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_28_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_28_MCAV,NA,MCAV
+Dec 2022,Healthy,NA,NA,T4_28_MCAV,Healthy,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_30_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_30_MCAV,NA,MCAV
+Dec 2022,Healthy,NA,NA,T4_30_MCAV,Healthy,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_76_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_76_MCAV,NA,MCAV
+Dec 2022,Healthy,NA,NA,T4_76_MCAV,Healthy,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_77_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_77_OFAV,NA,OFAV
+Dec 2022,Healthy,NA,NA,T4_77_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_78_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_78_OFAV,NA,OFAV
+Dec 2022,Healthy,NA,NA,T4_78_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_79_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_79_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T4_79_PSTR,Healthy,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_80_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_80_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T4_80_PSTR,Healthy,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_92_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_92_OFAV,NA,OFAV
+Dec 2022,Healthy,NA,NA,T4_92_OFAV,Healthy,OFAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_94_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T4_94_MCAV,NA,MCAV
+Dec 2022,Diseased,NA,NA,T4_94_MCAV,Diseased_Tissue,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_95_MCAV,NA,MCAV
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T4_95_MCAV,NA,MCAV
+Dec 2022,Diseased,NA,NA,T4_95_MCAV,Diseased_Tissue,MCAV
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_96_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T4_96_PSTR,NA,PSTR
+Dec 2022,Diseased,NA,NA,T4_96_PSTR,Diseased_Tissue,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_97_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T4_97_PSTR,NA,PSTR
+Dec 2022,Diseased,NA,NA,T4_97_PSTR,Diseased_Tissue,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_98_PSTR,NA,PSTR
+May 2022,Not_yet_tagged,Dec 2022,Healthy,T4_98_PSTR,NA,PSTR
+Dec 2022,Healthy,NA,NA,T4_98_PSTR,Healthy,PSTR
+Jun 2019,Not_yet_tagged,May 2022,Not_yet_tagged,T4_100_OFAV,NA,OFAV
+May 2022,Not_yet_tagged,Dec 2022,Diseased,T4_100_OFAV,NA,OFAV
+Dec 2022,Diseased,NA,NA,T4_100_OFAV,Diseased_Tissue,OFAV
