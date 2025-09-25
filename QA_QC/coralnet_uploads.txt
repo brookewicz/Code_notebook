@@ -1,0 +1,16 @@
+# made list of photos from 2022 PQs that need to be uploaded to coralnet to match 2023 transects 
+# separate list of each transect (separate folders for each transect in SCTLD_Tracking)
+# txt files and photos are in respective T folders in google drive - SCTLD_Tracking/Belize/2022/Photoquadrats/
+# coralnet data is downloaded to SCTLD_Samples once scored 
+
+grep "need to upload" list_of_photos > list_to_upload_2025
+
+mkdir -p for_upload_2025
+while IFS=, read -r filename _; do
+    cp "$filename" for_upload_2025/
+done < list_to_upload_2025
+
+# check numbers match 
+wc -l list_to_upload_2025
+
+ls -A for_upload_2025/ | wc -l  
