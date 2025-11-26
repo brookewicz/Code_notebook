@@ -1,4 +1,6 @@
 "Status","CNAT","DLAB","MCAV","OANN","OFAV","PAST","PSTR","SSID","Total"
-"Bleached",1,5,18,18,14,21,19,15,111
-"Not Bleached",0,3,7,2,7,7,2,20,48
+"Bleached or Paled",1,5,18,18,14,21,19,15,111
+"Bleached",0,0,5,14,9,14,6,8,56
+"Paled",1,5,18,18,14,15,18,13,102
+"Not Bleached or Paled",0,3,7,2,7,7,2,20,48
 "Total",1,8,25,20,21,28,21,35,159
