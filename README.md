@@ -31,6 +31,9 @@
 ### Scripts
 - **organize_photos.sh:** 8/7/2025 bash script to reorganize google drive colony photos by species 
 
+### FileChecks
+- confirmed GW raw SCTLD sequences have been duplicated in my sample analysis (in CBC_Metagenomics repo)
+- script and more detail in *gw_MAGS_filecheck_script*
 #### ColonyData
 - **ColonyChecks.ipynb:** 8/10/2025 script to add a file to SCTLD_Samples repo to track which colonies' health statuses have been confirmed 
 
