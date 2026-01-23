@@ -1,0 +1,49 @@
+# extract sample IDs from each file 
+tail -n +2 gw_samples_mcav.csv | cut -d '"' -f2 | cut -d '_' -f1-4 | sort -u > mcav_filelist.txt
+# remove first 4 lines -> extra files (not sequences)
+sed -i '1,4d' mcav_filelist.txt
+
+# MY MCAV FILE LIST 
+# got these from the file lists in my unity project folder
+## margin
+052022_BEL_CBC_T1_12_MCAV
+052022_BEL_CBC_T1_40_MCAV
+052022_BEL_CBC_T3_48_MCAV
+052022_BEL_CBC_T3_40_MCAV
+## healthy 2022
+052022_BEL_CBC_T3_13_MCAV
+052022_BEL_CBC_T3_1_MCAV
+052022_BEL_CBC_T3_19_MCAV
+052022_BEL_CBC_T2_10_MCAV
+052022_BEL_CBC_T1_57_MCAV
+## healthy 2019 
+062019_BEL_CBC_T3_8_MCAV
+062019_BEL_CBC_T2_16_MCAV
+062019_BEL_CBC_T1_20_MCAV
+062019_BEL_CBC_T1_24_MCAV
+062019_BEL_CBC_T3_9_MCAV
+062019_BEL_CBC_T3_14_MCAV
+062019_BEL_CBC_T3_1_MCAV
+062019_BEL_CBC_T3_15_MCAV
+062019_BEL_CBC_T1_16_MCAV
+062019_BEL_CBC_T3_16_MCAV
+062019_BEL_CBC_T1_3_MCAV
+062019_BEL_CBC_T2_5_MCAV
+062019_BEL_CBC_T3_6_MCAV
+# diseased 
+052022_BEL_CBC_T1_70_MCAV
+052022_BEL_CBC_T3_49_MCAV
+052022_BEL_CBC_T3_51_MCAV
+052022_BEL_CBC_T3_60_MCAV
+052022_BEL_CBC_T1_13_MCAV
+
+# I'm just going to check manually...
+# comparing to file list from GW's analysis in: mcav_filelist.txt 
+# added "checked" and "confirmed" or "missing" after crosschecking my sample IDs 
+# all mcav present 
+
+# repeat pstr
+# extract sample IDs from each file 
+tail -n +2 gw_samples_pstr.csv | cut -d '"' -f2 | cut -d '_' -f1-4 | sort -u > pstr_filelist.txt
+# remove first 4 lines -> extra files (not sequences)
+sed -i '1,4d' pstr_filelist.txt

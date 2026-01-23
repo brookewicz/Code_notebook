@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH -c 24  # Number of Cores per Task
+#SBATCH --mem=180G  # Requested Memory
+#SBATCH -p cpu  # Partition
+#SBATCH -t 24:00:00  # Job time limit
+#SBATCH --mail-type=ALL
+#SBATCH -o /work/pi_sarah_gignouxwolfsohn_uml_edu/brooke/job_files/tarzip_candeleteafter-%j.out  # %j = job ID
+
+
+# tar zip all trimmed files 
+cd //project/pi_sarah_gignouxwolfsohn_uml_edu/brooke/
+tar -zcvf qc_112023.tar.gz qc_112023
+
+cd //project/pi_sarah_gignouxwolfsohn_uml_edu/brooke/pilot_past
+tar -zcvf trimmed_redo.tar.gz trimmed_redo
+
+cd //project/pi_sarah_gignouxwolfsohn_uml_edu/brooke/pstr
+tar -zcvf trimmed.tar.gz trimmed
+
+cd //project/pi_sarah_gignouxwolfsohn_uml_edu/brooke/mcav
+tar -zcvf trimmed.tar.gz trimmed
+
+
+# get list of sarah's files to make sure I have the same ones 
+# make path for output file 
+CSVPATH='/work/pi_sarah_gignouxwolfsohn_uml_edu/brooke/misc_jobs'
+
+
+cd //project/pi_sarah_gignouxwolfsohn_uml_edu/SCTLD_metagenomes
+
+cd MCAV/trimmed
+# make file 
+echo "filename,size(bytes)" > $CSVPATH/gw_samples_mcav.csv && find . -maxdepth 1 -type f -printf '"%f",%s\n' >> $CSVPATH/gw_samples_mcav.csv
+
+# repeat 
+cd OFAV/trimmed
+# make file 
+echo "filename,size(bytes)" > $CSVPATH/gw_samples_pstr.csv && find . -maxdepth 1 -type f -printf '"%f",%s\n' >> $CSVPATH/gw_samples_pstr.csv
+
+cd OANN
+# make file 
+echo "filename,size(bytes)" > $CSVPATH/gw_samples_orbi.csv && find . -maxdepth 1 -type f -printf '"%f",%s\n' >> $CSVPATH/gw_samples_orbi.csv
+
+
