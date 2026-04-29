@@ -28,8 +28,13 @@
     - *clb_immune_colonysummary.csv* - immune tagged colonies for 2023 bleaching tracking sorted by species, transect, and bleaching status
 
 ## QA_QC
-### Scripts
 - **organize_photos.sh:** 8/7/2025 bash script to reorganize google drive colony photos by species 
+
+- **DataCheck.ipynb:** *in progress - 4/29/2026* script to check sample numbers after sampling trip -> do sample conditions match colony conditions? did we collect the correct number of samples?
+
+- **DataCheck_2019_2022-Copy1.ipynb:** same as above but for 2019-2022 specifically 
+
+- **coralnet_uploads.txt:** script to upload missing 2022 photos to coralnet
 
 ### FileChecks
 - confirmed GW raw SCTLD sequences have been duplicated in my sample analysis (in CBC_Metagenomics repo)
@@ -45,6 +50,7 @@
 - **BleachedSamples.ipynb:** 8/11/2025 working on updating sample types in SCTLD_samples from healthy to diseased 
 
 - **sample_fixes.ipynb:** 9/2024 started fixing misc issues (format issues, inconsistencies, started adding bleaching data into sample type) in SCTLD_samples spreadsheet but never exported or finished (last checked on.. 8/11/2025)
+- **ColonyChecks.ipynb:** made new data table to store info about checking colony data. has been exported to SCTLD_Samples and is updated there as data is checked
 
 
 ## CBC_Maps
