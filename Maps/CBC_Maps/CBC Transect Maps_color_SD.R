@@ -61,6 +61,7 @@ coral_subset<-coral_subset %>%
       NewTagNum == '12flag' & Species == 'PAST' & Transect == "LAGOON" ~ "Dead",
       NewTagNum == '20' & Species == 'PAST' & Transect == "CBC30N"~ "Check", #based on 062025 notes
       NewTagNum == '341' & Species == 'SSID' & Transect == "SR30N" ~ "Dead",
+      NewTagNum == '47' & Species == 'PAST' & Transect == "LAGOON"~ "Check",
       TRUE ~ Condition
     ))
 
@@ -93,7 +94,8 @@ speccolors = c('SSID'='red3','MCAV'='darkorchid4','PAST'='orange',
 
 tiff("CBC30N_color.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=CBC30N, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), color = "black") +
+  geom_point(data=CBC30N,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
   geom_point(data=CBC30N, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
@@ -101,12 +103,12 @@ ggplot() +
   geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
   geom_text_repel(data=CBC30N, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
                   nudge_x = 0.1,
-                  box.padding = 0.5, point.padding = 0.5)+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 31, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-5, 7, by = 1)) +
+                  box.padding = 0.4, point.padding = 0.5)+
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
-  ggtitle("CBC30N") +
+  labs(title = "CBC CBC30N", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
@@ -120,23 +122,23 @@ dev.off()
 ##CBC Lagoon
 
 # change coordinates of coral 18 so it can be seen in the map 
-coral_subset <- coral_subset %>%
-  mutate(Meters_90 = if_else(Species == "PAST" & Transect == "LAGOON" & NewTagNum == "18",
-                             2.2,
-                             Meters_90))
-coral_subset <- coral_subset %>%
-  mutate(Meters_90 = if_else(Species == "SSID" & Transect == "LAGOON" & NewTagNum == "19",
-                             2.6,
-                             Meters_90)) %>%
-  mutate(Meter = if_else(Species == "SSID" & Transect == "LAGOON" & NewTagNum == "19",
-                             15,
-                             Meter)) %>%
-  mutate(Meters_90 = if_else(Species == "MCAV" & Transect == "LAGOON" & NewTagNum == "12",
-                       2.7,
-                       Meters_90))
-  mutate(Meters_90 = if_else(Species == "MCAV" & Transect == "LAGOON" & NewTagNum == "14",
-                           -1,
-                           Meters_90))
+# coral_subset <- coral_subset %>%
+#   mutate(Meters_90 = if_else(Species == "PAST" & Transect == "LAGOON" & NewTagNum == "18",
+#                              2.2,
+#                              Meters_90))
+# coral_subset <- coral_subset %>%
+#   mutate(Meters_90 = if_else(Species == "SSID" & Transect == "LAGOON" & NewTagNum == "19",
+#                              2.6,
+#                              Meters_90)) %>%
+#   mutate(Meter = if_else(Species == "SSID" & Transect == "LAGOON" & NewTagNum == "19",
+#                              15,
+#                              Meter)) %>%
+#   mutate(Meters_90 = if_else(Species == "MCAV" & Transect == "LAGOON" & NewTagNum == "12",
+#                        2.7,
+#                        Meters_90)) %>%
+#   mutate(Meters_90 = if_else(Species == "MCAV" & Transect == "LAGOON" & NewTagNum == "14",
+#                            -1,
+#                            Meters_90))
 
 Lagoon <- coral_subset %>% subset(Transect == "LAGOON") %>%
   subset(NewTagNum != "12flag") #%>%
@@ -146,7 +148,8 @@ Lagoon <- coral_subset %>% subset(Transect == "LAGOON") %>%
   
 tiff("CBCLagoon_color.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=Lagoon, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), color = "black") +
+  geom_point(data=Lagoon,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
   geom_point(data=Lagoon, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
@@ -159,7 +162,7 @@ ggplot() +
   scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
-  ggtitle("CBC Lagoon") +
+  labs(title = "CBC Lagoon", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
@@ -178,54 +181,57 @@ SR30N <- coral_subset %>% subset(Transect == "SR30N") %>%
 
 tiff("SR30N_color4.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=SR30N, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter), shape = 21, color = "black") +
+  geom_point(data=SR30N,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
   geom_point(data=SR30N, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
   scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
   geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
   geom_text_repel(data=SR30N, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
-                  nudge_x = 0.2,
-                  box.padding = 0.4, point.padding = 0.4
-                  )+
+                  nudge_x = 0.1,
+                  box.padding = 0.4, point.padding = 0.5)+
   scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
   scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
-  # scale_shape_manual(values = c(21, 24)) +
-  ggtitle("SR30N") +
+  scale_shape_manual(values = c(21,24)) +
+  labs(title = "SR30N", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text = element_text(colour = "black", hjust = 1, size = 12),
         axis.title = element_text(size = 12)) +
   theme(legend.key.size = unit(1.5, "line"))
-  
 dev.off()
+
+
 
 #Curlew
 Curlew <- coral_subset %>% subset(Transect == "CURLEW")
 
 tiff("Curlew_color.tif",width = 5, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=Curlew, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter),shape = 21, color = "black", ) +
+  geom_point(data=Curlew,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
   geom_point(data=Curlew, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
   scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
   geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
-  geom_text_repel(data=Curlew, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.5) +
+  geom_text_repel(data=Curlew, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
+                  nudge_x = 0.1,
+                  box.padding = 0.4, point.padding = 0.5)+
   scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-6, 10, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
-  # scale_shape_manual(values = c(21, 24)) +
-  ggtitle("Curlew") +
+  scale_shape_manual(values = c(21,24)) +
+  labs(title = "Curlew", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text = element_text(colour = "black", hjust = 1, size = 12),
-        axis.title = element_text(size = 12)) + 
+        axis.title = element_text(size = 12)) +
   theme(legend.key.size = unit(1.5, "line"))
-
 dev.off()
 
 
@@ -234,26 +240,27 @@ BB <- coral_subset %>% subset(Transect == "BB")
 
 tiff("BB_color.tif",width = 5, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=BB, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter),shape = 21, color = "black", ) +
+  geom_point(data=BB,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
-  geom_point(data=BB, aes(x = Meters_90, y = Meter, alpha = Condition == "Dead"),
+  geom_point(data=BB, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
-  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
-  geom_text_repel(data=BB, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.5) +
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-6, 10, by = 1)) +
-  scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
-  # scale_alpha_manual(values=c(specalpha), guide = 'none') +
-  # scale_shape_manual(values = c(21, 24)) +
-  ggtitle("Bread and Butter") +
+  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
+  geom_text_repel(data=BB, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
+                  nudge_x = 0.1,
+                  box.padding = 0.4, point.padding = 0.5)+
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
+  scale_shape_manual(values = c(21,24)) +
+  labs(title = "BB", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text = element_text(colour = "black", hjust = 1, size = 12),
-        axis.title = element_text(size = 12)) + 
+        axis.title = element_text(size = 12)) +
   theme(legend.key.size = unit(1.5, "line"))
-
 dev.off()
 
 #Hangman
@@ -261,26 +268,27 @@ HANGMAN <- coral_subset %>% subset(Transect == "HANGMAN")
 
 tiff("HANGMAN_color.tif",width = 5, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=HANGMAN, aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter),shape = 21, color = "black", ) +
+  geom_point(data=HANGMAN,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+             color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
-  geom_point(data=HANGMAN, aes(x = Meters_90, y = Meter, alpha = Condition == "Dead"),
+  geom_point(data=HANGMAN, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
              pch = 4, color = "snow", stroke = 0.5) +
-  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
-  geom_text_repel(data=HANGMAN, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", 
-                  size = 4, hjust=-0.6, nudge_x = 0.1,
-                  box.padding = 0.4, point.padding = 0.5) +
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-6, 10, by = 1)) +
-  scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
-  ggtitle("Hangman") +
+  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
+  geom_text_repel(data=HANGMAN, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
+                  nudge_x = 0.2,
+                  box.padding = 0.4, point.padding = 0.5)+
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
+  scale_shape_manual(values = c(21,24)) +
+  labs(title = "HANGMAN", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text = element_text(colour = "black", hjust = 1, size = 12),
-        axis.title = element_text(size = 12)) + 
+        axis.title = element_text(size = 12)) +
   theme(legend.key.size = unit(1.5, "line"))
-
 dev.off()
 
 
