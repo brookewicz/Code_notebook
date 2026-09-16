@@ -354,8 +354,12 @@ ggplot() +
     nudge_y = -0.1,  # Shift down
     # box.padding = 0.5, point.padding = 0.6
   )+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(BB$Meter)+2, by = 1)) +
+  scale_x_continuous("Meters Perpendicular",
+                     breaks = c(
+                       seq(floor(min(BB$Meters_90)), 0, by = 1), # Ticks every 2m on negative side
+                       seq(1, ceiling(max(BB$Meters_90)), by = 1) # Ticks every 1m on positive side
+                     ))+
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
   labs(title = "BB") +
