@@ -14,7 +14,7 @@ library(ggplot2)
 library(RColorBrewer)
 
 getwd()
-set.seed()
+set.seed(123)
 
 setwd('/Users/brookesienkiewicz/Documents/Code_notebook/Maps/CBC_Maps/')
 corals <- read_csv("/Users/brookesienkiewicz/Documents/sctld/SCTLD_samples/Sample_Data/CBC_ColonyData.csv")
@@ -234,11 +234,10 @@ dev.off()
 
 
 ########## SR30N ##########
-SR30N_all <- coral_subset %>% subset(Transect == "SR30N") 
-# %>%
-#   mutate(NewTagNum = as.numeric(NewTagNum)) %>%
-#   subset(NewTagNum < 300) %>%
-#   subset(NewTagNum != "51")
+SR30N_all <- coral_subset %>% subset(Transect == "SR30N") %>%
+  mutate(NewTagNum = as.numeric(NewTagNum)) %>%
+  subset(NewTagNum < 300) %>%
+  subset(NewTagNum != "51")
 
 # confirm it includes newly tagged colonies
 length(unique(SR30N_all$NewTagNum))
@@ -253,12 +252,12 @@ unique(SR30N$Date_InitialTag)
 
 tiff("SR30N_color.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
-  geom_point(data=SR30N,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter, shape = check), 
+  geom_point(data=SR30N,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter), shape = 21,
              color = "black", alpha = 0.7) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
-  geom_point(data=SR30N, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
-             pch = 4, color = "snow", stroke = 0.5) +
-  scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
+  # geom_point(data=SR30N, aes(x = Meters_90, y = Meter, alpha = 0.6),
+  #            pch = 4, color = "snow", stroke = 0.5) +
+  # scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
   geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
   geom_text_repel(data=SR30N, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
                   nudge_x = 0.1,
@@ -266,8 +265,8 @@ ggplot() +
   scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
   scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
-  scale_shape_manual(values = c(21,24)) +
-  labs(title = "CBC SR30N", shape = "Check if dead") +
+  # scale_shape_manual(values = c(21,24)) +
+  labs(title = "CBC SR30N") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
@@ -357,7 +356,7 @@ ggplot() +
   scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
-  labs(title = "BB", shape = "Check if dead") +
+  labs(title = "BB") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
@@ -380,39 +379,37 @@ HANGMAN<-HANGMAN_all %>%
 length(unique(HANGMAN$NewTagNum))
 unique(HANGMAN$Date_InitialTag)
 
-tiff("HANGMAN_color2.tif",width = 5, height = 8, units = "in", res = 300)
+library(ggrepel)
+library(scales)
+
+# expand x axis - help from gemini
+stretch_neg_trans <- trans_new(
+  name = "stretch_neg",
+  transform = function(x) ifelse(x < 0, x * 2, x),       # Multiply negative space by 2x
+  inverse = function(x) ifelse(x < 0, x / 2, x)
+)
+
+tiff("HANGMAN_color.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
   geom_point(data=HANGMAN,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter), 
              color = "black", alpha = 0.7, shape = 21) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
-  geom_point(data=HANGMAN, aes(x = Meters_90, y = Meter, alpha = Condition == 'Dead'),
-             pch = 4, color = "snow", stroke = 0.5) +
-  scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0), guide = 'none')+
   geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
-  geom_text_repel(data=HANGMAN, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, 
+  geom_text_repel(data=HANGMAN, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = Inf, color="black", size = 4, 
                   # hjust=-0.25,
-                  nudge_x = 0.1,
-                  box.padding = 0.4, point.padding = 0.6,
-                  min.segment.length = 0.2
+                  nudge_x = -0.3,
+                  box.padding = 0.5, point.padding = 0.3,
+                  min.segment.length = 0, segment.size = 0.4, segment.alpha = 0.8
                   )+
-  # custom labels for 11, 12, 35
-  # geom_text_repel(data=filter(HANGMAN, NewTagNum == '11'), aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, 
-  #                 hjust=-0.25, nudge_x=-0.5,
-  #                 nudge_y = 0.5,
-  #                 box.padding = 0.4, point.padding = 0.6,
-  #                 min.segment.length = 0
-  # )+
-  # geom_text_repel(data=filter(HANGMAN, NewTagNum == '23'), aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4,
-  #                 nudge_x=-0.5,
-  #                 nudge_y = 0.5,
-  #                 box.padding = 0.4, point.padding = 0.6,
-  #                 min.segment.length = 0
-  # )+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(HANGMAN$Meter), by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = c(
+    seq(floor(min(HANGMAN$Meters_90)), 0, by = 0.5), # Larger interval for negative axis (e.g., by 2)
+    seq(1, ceiling(max(HANGMAN$Meters_90)), by = 1)),
+    labels = label_number(accuracy = 1)# Normal interval for positive axis (e.g., by 1)
+  )+
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
-  labs(title = "HANGMAN", shape = "Check if dead") +
+  labs(title = "HANGMAN") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
