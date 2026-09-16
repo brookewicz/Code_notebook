@@ -343,7 +343,9 @@ ggplot() +
   geom_text_repel(data=filter(BB, NewTagNum != "25"), aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, 
                   # hjust=-0.25,
                   nudge_x = 0.1,
-                  box.padding = 0.4, point.padding = 0.4)+
+                  box.padding = 0.4, point.padding = 0.4,
+                  min.segment.length = 0, segment.size = 0.4, segment.alpha = 0.8
+                  )+
  # custom positioning for the annoying ones
   geom_text_repel(
     data = filter(BB, NewTagNum %in% "25"),
@@ -394,18 +396,20 @@ ggplot() +
   geom_point(data=HANGMAN,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter), 
              color = "black", alpha = 0.7, shape = 21) +
   scale_fill_manual(values=c(speccolors), guide = guide_legend(override.aes = list(pch = 21, size = 5))) +
-  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
   geom_text_repel(data=HANGMAN, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = Inf, color="black", size = 4, 
                   # hjust=-0.25,
                   nudge_x = -0.3,
                   box.padding = 0.5, point.padding = 0.3,
                   min.segment.length = 0, segment.size = 0.4, segment.alpha = 0.8
                   )+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(HANGMAN$Meter), by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = c(
-    seq(floor(min(HANGMAN$Meters_90)), 0, by = 0.5), # Larger interval for negative axis (e.g., by 2)
-    seq(1, ceiling(max(HANGMAN$Meters_90)), by = 1)),
-    labels = label_number(accuracy = 1)# Normal interval for positive axis (e.g., by 1)
+  geom_vline(xintercept = 0, lty = 2, lwd = 0.25) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(HANGMAN$Meter)+2, by = 1)) +
+  scale_x_continuous("Meters Perpendicular",
+                     trans = stretch_neg_trans,
+                     breaks = c(
+                       seq(floor(min(HANGMAN$Meters_90)), 0, by = 1), # Ticks every 2m on negative side
+                       seq(1, ceiling(max(HANGMAN$Meters_90)), by = 1) # Ticks every 1m on positive side
+                       )
   )+
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
