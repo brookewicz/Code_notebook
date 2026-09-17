@@ -129,11 +129,11 @@ ggplot() +
   geom_text_repel(data=CBC30N, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
                   nudge_x = 0.1,
                   box.padding = 0.4, point.padding = 0.5)+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(CBC30N$Meter)+1, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(min(CBC30N$Meters_90), max(CBC30N$Meters_90), by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
-  labs(title = "CBC CBC30N", shape = "Check if dead") +
+  labs(title = "CBC30N", shape = "Check if dead") +
   theme(plot.title = element_text(size = 12,hjust = 0.5),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
@@ -218,8 +218,8 @@ ggplot() +
   geom_text_repel(data=Lagoon, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
                   nudge_x = 0.1,
                   box.padding = 0.4, point.padding = 0.5)+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(Lagoon$Meter)+1, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(floor(min(Lagoon$Meters_90)), ceiling(max(Lagoon$Meters_90)), by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
   labs(title = "CBC Lagoon", shape = "Check if dead") +
@@ -262,8 +262,8 @@ ggplot() +
   geom_text_repel(data=SR30N, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4, hjust=-0.25,
                   nudge_x = 0.1,
                   box.padding = 0.4, point.padding = 0.5)+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(SR30N$Meter)+1, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(floor(min(SR30N$Meters_90)), ceiling(max(SR30N$Meters_90)), by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   # scale_shape_manual(values = c(21,24)) +
   labs(title = "CBC SR30N") +
@@ -291,7 +291,7 @@ Curlew<-Curlew_all %>%
 length(unique(Curlew$NewTagNum))
 unique(Curlew$Date_InitialTag)
 
-tiff("Curlew_color.tif",width = 5, height = 8, units = "in", res = 300)
+tiff("Curlew_color.tif",width = 6, height = 8, units = "in", res = 300)
 ggplot() +
   geom_point(data=Curlew,aes(x = Meters_90, y = Meter, fill = Species, size = MaxDiameter), 
              color = "black", alpha = 0.7, shape = 21) +
@@ -303,8 +303,8 @@ ggplot() +
   geom_text_repel(data=Curlew, aes(x=Meters_90, y=Meter, label=NewTagNum), max.overlaps = 100, color="black", size = 4,
                   nudge_x = 0.1,
                   box.padding = 0.4, point.padding = 0.5)+
-  scale_y_continuous("Transect Length (m)", breaks = seq(0, 42, by = 1)) +
-  scale_x_continuous("Meters Perpendicular", breaks = seq(-12, 7, by = 1)) +
+  scale_y_continuous("Transect Length (m)", breaks = seq(0, max(Curlew$Meter)+1, by = 1)) +
+  scale_x_continuous("Meters Perpendicular", breaks = seq(floor(min(Curlew$Meters_90)), ceiling(max(Curlew$Meters_90)), by = 1)) +
   scale_size_continuous(range = c(2,6.5), name = "", guide = 'none') +
   scale_shape_manual(values = c(21,24)) +
   labs(title = "Curlew", shape = "Check if dead") +
